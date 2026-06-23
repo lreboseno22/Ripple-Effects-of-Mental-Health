@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Ripple Effects of Mental Illness</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="background-cycle" aria-hidden="true"></div>
+  <main class="deck" aria-live="polite">
+    <section class="slide title-slide active" aria-label="Slide 1">
+      <div class="ripple-field" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="slide-content center">
+        <p class="eyebrow">Community Mental Health Presentation</p>
+        <h1>The Ripple Effects of Mental Health</h1>
+        <p class="names">Vashawn, Liam</p>
+      </div>
+    </section>
+
+    <section class="slide profile-slide" aria-label="Slide 2">
+      <div class="slide-content">
+        <h2>Meet the Presenters</h2>
+        <div class="profile-grid">
+          <article class="profile-card">
+            <div class="portrait" style="--photo: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1ecC8VAS4Yy8HpgmggHUUdY2_OcD2h3Q5eLn6ISzSroKmelMKLCxJruk&s=10');">
+            </div>
+            <p>Hi. My name is Liam. I'm 23 years old and from Bushwick. I'm a huge tech head and I'm passionate about directly supporting and making a positive impact in my community.</p>
+          </article>
+
+          <article class="profile-card">
+            <div class="portrait" style="--photo: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1ecC8VAS4Yy8HpgmggHUUdY2_OcD2h3Q5eLn6ISzSroKmelMKLCxJruk&s=10');">
+            </div>
+            <p>Hello, My name is Vashawn Swaby. I'm a 24 year old male from Queens and love Theater performance. My aspirations include finishing my bachelors degree at Medgar Evers College in Social Work and working in Child Protective Services.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide flip-slide image-cycle-slide" aria-label="Slide 3">
+      <div class="flip-card">
+        <div class="flip-face flip-front center-alignment">
+          <div class="slide-content center">
+            <p class="eyebrow">The Foundation</p>
+            <h2>Why Mental Health?</h2>
+            <p class="subtitle">Mental Health is the foundation of everything we do.</p>
+            <button class="hint-button" type="button" data-flip>Flip to read more</button>
+          </div>
+        </div>
+        <div class="flip-face flip-back">
+          <div class="slide-content split">
+            <div>
+              <p>Mental Health is not talked about enough as it should be! It is probably one of the most important things every human being should be aware of as it is the foundation of our life. Without our minds being right, it can cause us to abuse our family members or loved ones, poor financial decisions or even do something as serious as hurt ourselves or others physically or mentally.</p>
+              <p>Many young people in our community between the ages of 10 and 19 do not have consistent access to reliable mental health support, qualified providers, or safe spaces to process their emotional and behavioral needs. Without timely access to mental health care, young people may struggle to stay in school, maintain healthy relationships, and reach their full potential. Addressing the mental health access gap is essential for helping youth build resilience, stability, and long-term well-being.</p>
+              <button class="hint-button dark" type="button" data-flip>Flip back</button>
+            </div>
+            <div class="support-image" style="--photo: url('https://www.statnews.com/wp-content/uploads/2017/05/AP151547368-645x645.jpg');">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide flip-slide numbers-slide" aria-label="Slide 4">
+      <div class="flip-card">
+        <div class="flip-face flip-front">
+          <div class="slide-content numbers-front">
+            <div class="slide4-header">
+              <p class="eyebrow">NYC Youth Mental Health</p>
+              <h2>The Numbers Behind the Crisis</h2>
+              <p class="subtitle">Mental health challenges are affecting NYC communities differently.</p>
+            </div>
+
+            <div class="top-stats">
+              <article class="stat-card hero">
+                <div class="stat-number">1 in 5</div>
+                <p class="stat-label">NYC youth experience symptoms of a mental health disorder</p>
+              </article>
+
+              <article class="stat-card">
+                <div class="stat-number">+30%</div>
+                <p class="stat-label">Increase in anxiety and depression concerns reported since the pandemic</p>
+              </article>
+
+              <article class="stat-card">
+                <div class="stat-number">60%</div>
+                <p class="stat-label">Of affected youth never receive adequate treatment.</p>
+              </article>
+            </div>
+
+            <div class="chart-section">
+              <h3>Mental Health Burden by Community</h3>
+              
+              <div class="charts-grid">
+                <div class="chart-card race-ethnicity-chart">
+                  <h4>Youth Feeling Sad/Hopeless by Race/Ethnicity</h4>
+                  <canvas id="raceEthnicityChart"></canvas>
+                </div>
+                <div class="chart-card gender-chart">
+                  <h4>Youth Feeling Sad/Hopeless by Gender</h4>
+                  <canvas id="genderChart"></canvas>
+                </div>
+                <div class="chart-card borough-chart">
+                  <h4>Youth Feeling Sad/Hopeless by Borough</h4>
+                  <canvas id="boroughChart"></canvas>
+                </div>
+                <div class="chart-card orientation-chart">
+                  <h4>Youth Feeling Sad/Hopeless by Sexual Orientation</h4>
+                  <canvas id="orientationChart"></canvas>
+                </div>
+              </div>
+
+            <div class="insight-panel">
+              <div class="insight">Financial insecurity remains one of the largest barriers to treatment.</div>
+              <div class="insight">A significant treatment gap exists, with only 35% of teens with mental health conditions receiving care, falling below the national average of 40%</div>
+              <div class="insight">Mental health stigma remains common in Caribbean, African, and Latino communities.</div>
+            </div>
+
+            <!-- <div class="flip-hint">Click to explore an interactive NYC mental health map →</div>
+            <button class="hint-button" type="button" data-flip>Flip for map</button> -->
+          </div>
+        </div>
+        <!-- <div class="flip-face flip-back">
+          <div class="slide-content">
+            <h2>Interactive Community Map</h2>
+            <div id="map" class="map-placeholder">
+              <p>Vega map embed area</p>
+              <small>Replace this box with your vega-embed script.</small>
+            </div>
+            <button class="hint-button dark" type="button" data-flip>Flip back</button>
+          </div>
+        </div> -->
+      </div>
+    </section>
+
+    <section class="slide ripple-slide" aria-label="Slide 5">
+      <div class="slide-content ripple-layout">
+        <p class="eyebrow">When support is missing</p>
+        <h2>The Ripple Effect:</h2>
+        <div class="ripple-list">
+          <article class="ripple-card">
+            <div class="ripple-content">
+                <h3>Housing Instability</h3>
+                <p>Data shows that individuals with severe behavioral health needs are 1.5 times more likely to experience homelessness. Once unhoused, navigating mental healthcare without a fixed address becomes extraordinarily difficult.</p>
+            </div>
+            <div class="ripple-image">
+                <img src="https://www.yesmagazine.org/wp-content/uploads/imports/10b022875b9c480993e73038cea81134.gif" alt="Housing Instability" />
+            </div>
+          </article>
+          <article class="ripple-card">
+            <div class="ripple-content">
+                <h3>The Legal Pipeline</h3>
+                <p>Approximately 15% of the annual jail population reports experiencing homelessness in the year prior to their arrest. With background-checked rental housing, this traps them in a cycle of homelessness and re-arrest</p>
+            </div>
+            <div class="ripple-image">
+                <img src="https://www.postnewsgroup.com/wp-content/uploads/2022/11/mentally-ill-california-prisons-featured-web.jpg" alt="The Legal Pipeline" />
+            </div>
+          </article>
+          <article class="ripple-card">
+            <div class="ripple-content">
+                <h3>Food Insecurity</h3>
+                <p>Roughly half of food-insecure NYC youth report high anxiety, stress, or depressive symptoms. They have a 55% higher rate of mental health and substance use care utilization.</p>
+            </div>
+            <div class="ripple-image">
+                <img src="https://cmsatoday.com/wp-content/uploads/sites/9/2022/06/021-780x470.jpg" alt="Food Insecurity" />
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+     <section class="slide bubble-slide" aria-label="Slide 6">
+      <div class="slide-content bubble-layout">
+        <div class="bubble-stage">
+          <button class="main-bubble" type="button" data-close-panel>How we are moving forward</button>
+          <button class="topic-bubble government" type="button" data-topic="government">
+            <span>Government</span>
+          </button>
+          <button class="topic-bubble warning" type="button" data-topic="warning">
+            <span>Warning Signs</span>
+          </button>
+          <button class="topic-bubble resources" type="button" data-topic="resources">
+            <span>Resources</span>
+          </button>
+        </div>
+        <aside class="side-panel" aria-live="polite">
+          <button class="close-panel" type="button" data-close-panel aria-label="Close panel">&times;</button>
+          <p class="eyebrow">Choose a bubble</p>
+          <h2>Moving Forward</h2>
+          <p>Mental Health issues start at a very young age. We believe mental health awareness should be integrated within the education system.</p>
+          <p>As a community we should push towards 24/7 crisis response for students in danger (which would be in the authority of the Department of Education Chancellor)As well as increase the number of psychologists and school worker which would need to be funded by city councils.</p>
+          <p>Student led mental health club and after school therapy programs (which would be in the authority of the NYC Department of Youth and Community Development)</p>
+        </aside>
+      </div>
+    </section>
+
+
+     <section class="slide exit-slide" aria-label="Slide 7">
+      <div class="final-rings" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="slide-content center">
+        <p class="eyebrow">Thank you</p>
+        <h2>Questions?</h2>
+      </div>
+    </section>
+  </main>
+
+  <nav class="controls" aria-label="Slideshow controls">
+    <button type="button" id="prevSlide" aria-label="Previous slide">&lsaquo;</button>
+    <span id="slideCounter">1 / 7</span>
+    <button type="button" id="nextSlide" aria-label="Next slide">&rsaquo;</button>
+  </nav>
+  <script src="script.js"></script>
+</body>
+</html>
